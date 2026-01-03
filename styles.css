@@ -1,0 +1,142 @@
+/* Design System for Yoboseyo Superette */
+
+:root {
+	--color-primary: #213A7A;
+	--color-off-white: #F8F6F2;
+	--color-beige: #E6E2D3;
+	--color-wood: #8C6A4F;
+	--color-sage: #A3B18A;
+	--color-text: #1a1a1a;
+	--color-muted: #6b6b6b;
+	--shadow-soft: 0 8px 20px rgba(0,0,0,0.06);
+	--radius: 12px;
+	--radius-sm: 8px;
+	--radius-lg: 20px;
+	--container: 1200px;
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 12px;
+	--space-4: 16px;
+	--space-5: 24px;
+	--space-6: 32px;
+	--space-7: 48px;
+	--space-8: 64px;
+}
+
+/* Reset */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+	margin: 0;
+	font-family: "Lora", ui-serif, Georgia, serif;
+	color: var(--color-text);
+	background: var(--color-off-white);
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img, picture { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+/* Typography */
+h1, h2, h3, h4, h5 { 
+	font-family: "Montserrat", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+	margin: 0 0 var(--space-4);
+	color: #121212;
+}
+h1 { font-size: clamp(2rem, 4vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+p { margin: 0 0 var(--space-4); color: var(--color-text); }
+
+/* Layout */
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--space-5); }
+.section { padding: var(--space-8) 0; }
+.section-header { margin-bottom: var(--space-6); }
+
+/* Header Navigation */
+.site-header {
+	position: sticky;
+	top: 0;
+	background: #fff;
+	border-bottom: 1px solid var(--color-beige);
+	z-index: 50;
+}
+.nav { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); height: 72px; }
+.brand {
+	display: flex; align-items: center; gap: var(--space-3);
+	font-family: "Montserrat", ui-sans-serif; font-weight: 700; letter-spacing: 0.5px;
+}
+.brand-mark { width: 36px; height: 36px; border-radius: 50%; background: var(--color-primary); }
+.brand-name { color: var(--color-primary); }
+.nav-links { display: flex; align-items: center; gap: var(--space-5); }
+.nav-links a { color: var(--color-text); font-weight: 600; }
+.nav-links a.cta { color: #fff; background: var(--color-primary); padding: 10px 16px; border-radius: var(--radius-sm); }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 18px; border-radius: var(--radius-sm); font-weight: 600; cursor: pointer; transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease; }
+.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-soft); }
+.btn-primary { background: var(--color-primary); color: #fff; }
+.btn-outline { border: 1px solid var(--color-primary); color: var(--color-primary); background: transparent; }
+.btn-neutral { background: var(--color-wood); color: #fff; }
+
+/* Hero Carousel */
+.hero { position: relative; overflow: hidden; background: #fff; }
+.hero .container { position: relative; }
+.carousel { position: relative; height: clamp(280px, 50vw, 540px); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft); }
+.slide { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: var(--space-7); color: #fff; opacity: 0; transition: opacity 600ms ease; }
+.slide .slide-content { position: relative; z-index: 1; }
+.slide-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.slide.active { opacity: 1; }
+.slide h1 { color: #fff; }
+.slide p { color: #f1f1f1; max-width: 720px; }
+
+/* Hero slide images are now controlled via <img class="slide-bg" src="..."> */
+
+.hero-cta { position: absolute; inset: auto 0 24px 0; display: flex; gap: var(--space-4); justify-content: center; }
+
+/* Featured Products */
+.cards { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--space-5); }
+.card { grid-column: span 12; background: #fff; border: 1px solid var(--color-beige); border-radius: var(--radius); padding: var(--space-5); box-shadow: var(--shadow-soft); }
+.card h3 { margin-bottom: var(--space-3); }
+.card .badge { display: inline-block; padding: 6px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; color: #fff; background: var(--color-primary); }
+.card .thumb { width: 100%; aspect-ratio: 4/3; border-radius: var(--radius-sm); background: var(--color-beige); margin-bottom: var(--space-4); }
+
+@media (min-width: 640px) { .card { grid-column: span 6; } }
+@media (min-width: 960px) { .card { grid-column: span 4; } }
+
+/* Visit Section */
+.visit { background: var(--color-beige); border-radius: var(--radius); padding: var(--space-6); }
+.visit .info { display: grid; gap: var(--space-5); grid-template-columns: 1fr; }
+@media (min-width: 900px) { .visit .info { grid-template-columns: 2fr 3fr; } }
+.visit .panel { background: #fff; border-radius: var(--radius); padding: var(--space-5); border: 1px solid rgba(0,0,0,0.06); box-shadow: var(--shadow-soft); }
+.visit .panel h3 { margin-bottom: var(--space-4); }
+.visit .actions { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+
+/* Footer */
+.site-footer { padding: var(--space-7) 0 var(--space-8); border-top: 1px solid var(--color-beige); background: #fff; }
+.footer-grid { display: grid; gap: var(--space-5); grid-template-columns: 1fr; }
+@media (min-width: 800px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
+.footer-title { font-weight: 700; margin-bottom: var(--space-3); }
+.footer-links a { display: block; color: var(--color-muted); margin-bottom: 8px; }
+.copyright { color: var(--color-muted); font-size: 14px; margin-top: var(--space-6); }
+
+/* Sticky Bottom Nav (Mobile) */
+.bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid var(--color-beige); box-shadow: 0 -6px 18px rgba(0,0,0,0.05); display: grid; grid-template-columns: repeat(5,1fr); align-items: center; z-index: 60; }
+.bottom-nav a { display: flex; align-items: center; justify-content: center; height: 56px; font-size: 13px; font-weight: 700; color: var(--color-text); }
+.bottom-nav a.active { color: var(--color-primary); }
+@media (min-width: 900px) { .bottom-nav { display: none; } }
+
+/* Utilities */
+.muted { color: var(--color-muted); }
+.spacer { height: var(--space-7); }
+.grid { display: grid; gap: var(--space-5); }
+.grid-2 { grid-template-columns: 1fr; }
+@media (min-width: 900px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+
+/* Space for bottom nav on mobile */
+@media (max-width: 899px) {
+	body { padding-bottom: 72px; }
+}
+
