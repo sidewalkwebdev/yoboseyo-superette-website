@@ -5,10 +5,69 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Yoboseyo Superette — Curated Market & Coffee</title>
 		<meta name="description" content="Korean-owned specialty market and coffee destination in Little Tokyo, DTLA. Curated goods, drinks, and community events." />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.yoboseyosuperette.com/" />
+		<meta property="og:title" content="Yoboseyo Superette — Curated Market & Coffee" />
+		<meta property="og:description" content="Korean-owned specialty market and coffee destination in Little Tokyo, DTLA. Curated goods, drinks, and community events." />
+		<meta property="og:image" content="https://www.yoboseyosuperette.com/assets/hero-interior.jpg" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://www.yoboseyosuperette.com/" />
+		<meta property="twitter:title" content="Yoboseyo Superette — Curated Market & Coffee" />
+		<meta property="twitter:description" content="Korean-owned specialty market and coffee destination in Little Tokyo, DTLA. Curated goods, drinks, and community events." />
+		<meta property="twitter:image" content="https://www.yoboseyosuperette.com/assets/hero-interior.jpg" />
+		
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="styles.css" />
+		
+		<!-- Schema.org JSON-LD -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Store",
+		  "name": "Yoboseyo Superette",
+		  "description": "Korean-owned specialty market and coffee destination in Little Tokyo, DTLA. Curated goods, drinks, and community events.",
+		  "image": "https://www.yoboseyosuperette.com/assets/hero-interior.jpg",
+		  "address": {
+		    "@type": "PostalAddress",
+		    "streetAddress": "358 E 2nd St",
+		    "addressLocality": "Los Angeles",
+		    "addressRegion": "CA",
+		    "postalCode": "90012",
+		    "addressCountry": "US"
+		  },
+		  "geo": {
+		    "@type": "GeoCoordinates",
+		    "latitude": 34.0479878,
+		    "longitude": -118.2401996
+		  },
+		  "url": "https://www.yoboseyosuperette.com",
+		  "telephone": "+13235551234",
+		  "priceRange": "$$",
+		  "openingHoursSpecification": [
+		    {
+		      "@type": "OpeningHoursSpecification",
+		      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+		      "opens": "08:00",
+		      "closes": "18:00"
+		    },
+		    {
+		      "@type": "OpeningHoursSpecification",
+		      "dayOfWeek": ["Saturday", "Sunday"],
+		      "opens": "09:00",
+		      "closes": "19:00"
+		    }
+		  ],
+		  "sameAs": [
+		    "https://www.instagram.com/ybsy_superette/"
+		  ]
+		}
+		</script>
 	</head>
 	<body>
 		<header class="site-header">
@@ -61,7 +120,7 @@
 					</div>
 					<div class="hero-cta">
 						<a class="btn btn-primary" href="#visit">Visit Us</a>
-						<a class="btn btn-outline" href="menu.html">See Menu</a>
+						<a class="btn btn-primary" href="menu.html">See Menu</a>
 					</div>
 				</div>
 			</section>
@@ -75,25 +134,25 @@
 
 					<div class="cards">
 						<article class="card">
-							<div class="thumb" aria-hidden="true"></div>
+							<img class="thumb" src="assets/pantry.jpg" alt="Small-Batch Pantry products" loading="lazy" />
 							<h3>Small-Batch Pantry</h3>
 							<p class="muted">Sauces, noodles, snacks, and condiments from curated brands.</p>
 							<span class="badge">Pantry</span>
 						</article>
 						<article class="card">
-							<div class="thumb" aria-hidden="true"></div>
+							<img class="thumb" src="assets/ceramics.jpg" alt="Artisan ceramics" loading="lazy" />
 							<h3>Artisan Ceramics</h3>
 							<p class="muted">Mugs, bowls, and serveware by local makers.</p>
 							<span class="badge">Home</span>
 						</article>
 						<article class="card">
-							<div class="thumb" aria-hidden="true"></div>
+							<img class="thumb" src="assets/stationery.jpg" alt="Stationery and books" loading="lazy" />
 							<h3>Stationery & Books</h3>
 							<p class="muted">Journals, cards, cookbooks, and creative reads.</p>
 							<span class="badge">Gifts</span>
 						</article>
 						<article class="card">
-							<div class="thumb" aria-hidden="true"></div>
+							<img class="thumb" src="assets/plants.jpg" alt="Plants and greenery" loading="lazy" />
 							<h3>Plants & Greenery</h3>
 							<p class="muted">Soft sage accents to refresh your space.</p>
 							<span class="badge">Lifestyle</span>
@@ -113,7 +172,7 @@
 							<h3>Next Pop-up</h3>
 							<p class="muted">Announce your next featured vendor or workshop here.</p>
 							<div class="actions">
-								<a class="btn btn-primary" href="https://instagram.com/" target="_blank" rel="noopener">Follow Instagram</a>
+							<a class="btn btn-primary" href="https://www.instagram.com/ybsy_superette/?hl=en" target="_blank" rel="noopener">Follow Instagram</a>
 								<a class="btn btn-outline" href="#">View Calendar</a>
 							</div>
 						</div>
@@ -138,7 +197,7 @@
 						<div class="info">
 							<div class="panel">
 								<h3>Address & Hours</h3>
-								<p>Little Tokyo, Downtown LA</p>
+						<p>358 E 2nd St<br>Los Angeles, CA 90012</p>
 								<p class="muted">Mon–Fri: 8am–6pm • Sat–Sun: 9am–7pm</p>
 								<div class="actions">
 								<a class="btn btn-primary" href="https://www.google.com/maps/place/Yoboseyo+Superette/@34.0479878,-118.2427745,1578m/data=!3m3!1e3!4b1!5s0x80c2c6380e6d4af9:0x529a69cec2b0c7d!4m6!3m5!1s0x80c2c7c91b1cfe7b:0xd6316bb22a18aedb!8m2!3d34.0479878!4d-118.2401996!16s%2Fg%2F11k3xxmdqb!5m1!1e2?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D" target="_blank" rel="noopener">Get Directions</a>
@@ -149,7 +208,7 @@
 								<h3>Contact & Social</h3>
 								<p class="muted">Questions about products, events, or wholesale? Reach out anytime.</p>
 								<div class="actions">
-									<a class="btn btn-outline" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+							<a class="btn btn-outline" href="https://www.instagram.com/ybsy_superette/?hl=en" target="_blank" rel="noopener">Instagram</a>
 									<a class="btn btn-outline" href="privacy.html">Privacy</a>
 									<a class="btn btn-outline" href="terms.html">Terms</a>
 								</div>
@@ -176,6 +235,14 @@
 						<a href="menu.html">Menu</a>
 						<a href="#events">Events</a>
 						<a href="#visit">Visit</a>
+					</div>
+				</div>
+				<div>
+					<div class="footer-title">Contact</div>
+					<div class="footer-links">
+						<a href="tel:+13235551234">(323) 555-1234</a>
+						<a href="mailto:hello@yoboseyo.com">hello@yoboseyo.com</a>
+						<a href="https://www.instagram.com/ybsy_superette/?hl=en" target="_blank" rel="noopener">@ybsy_superette</a>
 					</div>
 				</div>
 				<div>
